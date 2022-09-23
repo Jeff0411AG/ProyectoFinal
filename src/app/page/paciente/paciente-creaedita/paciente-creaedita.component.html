@@ -1,0 +1,55 @@
+<p>Paciente-creaedita works!</p>
+<div class="container">
+  <h1>Paciente</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Dni</mat-label>
+    <input matInput required placeholder="Dni" [(ngModel)]="paciente.Dni">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="Nombre" [(ngModel)]="paciente.Nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido</mat-label>
+    <input  matInput required placeholder="Apellido" [(ngModel)]="paciente.Apellido">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>FechaNacimiento</mat-label>
+    <input  matInput required placeholder="FechaNacimiento" [(ngModel)]="paciente.FechaNacimiento">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Telefono</mat-label>
+    <input  matInput required placeholder="Telefono" [(ngModel)]="paciente.Telefono">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>NumHistoria</mat-label>
+    <input  matInput required placeholder="NumHistoria" [(ngModel)]="paciente.NumHistoria">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Diagnostico</mat-label>
+    <input  matInput required placeholder="Diagnostico" [(ngModel)]="paciente.Diagnostico">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Version</mat-label>
+    <input  matInput required placeholder="Version" [(ngModel)]="paciente.Version">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/pacientes">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
