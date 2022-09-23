@@ -3,13 +3,14 @@ import { PacienteCreaeditaComponent } from './page/paciente/paciente-creaedita/p
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DoctorComponent } from './page/doctor/doctor.component';
+import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-creaedita.component';
 const routes: Routes = [
   {
 
   path: 'doctores', component:DoctorComponent,children: 
   [
-
-    {path: 'nuevo',component:DoctorComponent}
+                  //llama al componente correcto
+    {path: 'nuevo',component:DoctorCreaeditaComponent}
 
   ]
 
