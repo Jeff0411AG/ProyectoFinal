@@ -1,3 +1,8 @@
+
+import { TarjetaListarComponent } from './page/tarjeta/tarjeta-listar/tarjeta-listar.component';
+import { TarjetaCreaeditaComponent } from './page/tarjeta/tarjeta-creaedita/tarjeta-creaedita.component';
+import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,13 +11,7 @@ import { MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { DoctorComponent } from './page/doctor/doctor.component';
-import { DoctorListarComponent } from './page/doctor/doctor-listar/doctor-listar.component';
-import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-creaedita.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,10 +22,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
 
-    DoctorComponent,
-    DoctorListarComponent,
-    DoctorCreaeditaComponent
-    
+    TarjetaComponent,
+    TarjetaCreaeditaComponent,
+    TarjetaListarComponent
   ],
   imports: [
     BrowserModule,

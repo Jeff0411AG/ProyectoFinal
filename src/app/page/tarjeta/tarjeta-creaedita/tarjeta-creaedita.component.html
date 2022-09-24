@@ -1,0 +1,45 @@
+<p>Tarjeta-creaedita works!</p>
+<div class="container">
+  <h1>Tarjeta</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Método de Pago</mat-label>
+    <input matInput required placeholder="Metodo" [(ngModel)]="tarjeta.Metodo">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="Nombre" [(ngModel)]="tarjeta.Nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido</mat-label>
+    <input  matInput required placeholder="Apellido" [(ngModel)]="tarjeta.Apellido">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Número de Cuenta</mat-label>
+    <input  matInput required placeholder="NumCuenta" [(ngModel)]="tarjeta.NumCuenta">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Fecha de Vencimiento</mat-label>
+    <input  matInput required placeholder="FechaVen" [(ngModel)]="tarjeta.FechaVen">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Número CVC</mat-label>
+    <input  matInput required placeholder="NumCvc" [(ngModel)]="tarjeta.NumCvc">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/tarjetas">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

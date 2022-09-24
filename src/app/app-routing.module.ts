@@ -1,19 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DoctorComponent } from './page/doctor/doctor.component';
-
-
+import { TarjetaComponent } from './page/tarjeta/tarjeta.component';
+import { TarjetaCreaeditaComponent } from './page/tarjeta/tarjeta-creaedita/tarjeta-creaedita.component';
 const routes: Routes = [
   {
 
-  path: 'doctores', component:DoctorComponent,children: 
+  path: 'tarjetas', component: TarjetaComponent, children:
   [
-
-    {path: 'nuevo',component:DoctorComponent}
-
-  ]
-
- }
+   { path: 'nuevo', component: TarjetaCreaeditaComponent }
+  ]}
 
  ];
 
