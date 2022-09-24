@@ -13,7 +13,7 @@ export class DoctorService {
   private listaCambio =new Subject<Doctor[]>();
   constructor(private http:HttpClient) { }
   listar(){
-    return this.http.get<any>(this.url);
+    return this.http.get<Doctor[]>(this.url);
   }
   insertar(doctor: Doctor){
     return this.http.post(this.url,doctor);
