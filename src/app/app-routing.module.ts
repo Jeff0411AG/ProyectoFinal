@@ -2,14 +2,15 @@ import { PacienteComponent } from './page/paciente/paciente.component';
 import { PacienteCreaeditaComponent } from './page/paciente/paciente-creaedita/paciente-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DoctorComponent } from './page/doctor/doctor.component';
 import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-creaedita.component';
+import { DoctorComponent } from './page/doctor/doctor.component';
+
 const routes: Routes = [
   {
 
-  path: 'doctores', component:DoctorComponent,children: 
+  path: 'doctor', component:DoctorComponent,children: 
   [
-                  //llama al componente correcto
+
     {path: 'nuevo',component:DoctorCreaeditaComponent}
 
   ]
@@ -20,6 +21,10 @@ const routes: Routes = [
  [
   { path: 'nuevo', component: PacienteCreaeditaComponent }
  ]}
+
+
+
+ 
 
  ];
 

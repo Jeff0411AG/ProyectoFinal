@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
 import { Doctor } from '../../../model/doctor';
 import { DoctorService } from '../../../service/doctor.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-doctor-creaedita',
@@ -19,15 +19,17 @@ export class DoctorCreaeditaComponent implements OnInit {
   }
   aceptar(): void{
     //agregegar todas las condicionales
-    if (( this.doctor.nombre.length > 0 ) && ( this.doctor.Apellido.length > 0)){
+    if ( ( this.doctor.Apellido.length > 0)){
 
-      this.doctorService.insertar(this.doctor).subscribe(data=>{
-        this.doctorService.listar().subscribe(data=> {
+      this.doctorService.insertar(this.doctor).subscribe(data => {
+
+        this.doctorService.listar().subscribe(data => {
           this.doctorService.setLista(data);
+
         })
         
       })
-      this.router.navigate(['doctores'])
+      this.router.navigate(['doctor'])
 
     }else{
       this.mensaje="completa los valores";

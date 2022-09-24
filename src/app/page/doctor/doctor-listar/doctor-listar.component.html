@@ -10,7 +10,7 @@
   <div class="container">
     <div class="example-button-container">
       <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/doctores/nuevo">
+      routerLink="/doctor/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
      
@@ -21,9 +21,9 @@
               The actual rendered columns are set as a property on the row definition" -->
       
         <!-- Position Column -->
-        <ng-container matColumnDef="idDoctor">
+        <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> id Doctor. </th>
-          <td mat-cell *matCellDef="let element"> {{element.idDoctor}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
       
         <!-- Name Column -->

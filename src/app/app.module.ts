@@ -27,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     DoctorComponent,
     DoctorListarComponent,
     DoctorCreaeditaComponent,
+
     PacienteComponent,
     PacienteCreaeditaComponent,
     PacienteListarComponent
@@ -39,9 +40,9 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatTableModule,
     MatInputModule,
+    FormsModule,
     MatButtonModule,
-    MatIconModule,
-    FormsModule
+    MatIconModule
   
   ],
   providers: [],

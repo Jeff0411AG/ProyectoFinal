@@ -5,7 +5,8 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="idDoctor" [(ngModel)]="doctor.idDoctor">
+    <input matInput placeholder="Id" [(ngModel)]="doctor.id">
+
   </mat-form-field>
 
   <br>
@@ -15,8 +16,9 @@
     <input matInput required placeholder="nombre" [(ngModel)]="doctor.nombre">
 
   </mat-form-field>
-
+  
   <br>
+
   <mat-form-field class="example-full-width">
     <mat-label>Apellido</mat-label>
     <input  matInput required placeholder="Apellido" [(ngModel)]="doctor.Apellido">
@@ -30,7 +32,7 @@
 
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
+  <button mat-raised-button color="warn" routerLink="/doctor">Cancelar</button>
   <p>{{mensaje}}</p>
 
 </div>
