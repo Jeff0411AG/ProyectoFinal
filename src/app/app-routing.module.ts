@@ -15,6 +15,7 @@ const routes: Routes = [
 
   ]
 
+
  },
  {
  path: 'pacientes', component: PacienteComponent, children:
