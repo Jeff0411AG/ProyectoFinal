@@ -22,4 +22,12 @@ export class PacienteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  modificar(paciente: Paciente) {
+    return this.http.put(this.url + "/" + paciente.id, paciente);
+  }
+  listarId(id: number) {
+    return this.http.get<Paciente>(`${this.url}/${id}`);
+  }
+
+
 }
