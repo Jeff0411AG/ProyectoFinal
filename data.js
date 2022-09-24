@@ -57,7 +57,42 @@ module.exports = function () {
           NumHistoria: "04",
           Diagnostico: "true",
           Version: "1"
-        }]
+        }],
+
+        preguntas: [
+          {
+            idPregunta: 1,
+            Descripcion: "Pregunta 1",
+            Respuesta: "Respuesta 1",
+            
+          },
+          {
+            idPregunta: 2,
+            Descripcion: "Pregunta2",
+            Respuesta: "Respuesta 2",
+            
+          },
+          {
+            idPregunta: 3,
+            Descripcion: "jPregunta 3",
+            Respuesta: "respuesta 3",
+            
+          },
+          {
+            idPregunta: 4,
+            Descripcion: "Pregunta 4",
+            Respuesta: "Respuesta 4",
+            
+          }
+        ],      
+
+
+
+
+
+
+
+
     }
   
     return data

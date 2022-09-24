@@ -17,8 +17,10 @@ import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import{MatIconModule} from'@angular/material/icon';
+import {MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { PreguntasComponent } from './page/preguntas/preguntas.component';
+import { PreguntasListarComponent } from './page/preguntas/preguntas-listar/preguntas-listar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FormsModule } from '@angular/forms';
     DoctorCreaeditaComponent,
     PacienteComponent,
     PacienteCreaeditaComponent,
-    PacienteListarComponent
+    PacienteListarComponent,
+    PreguntasComponent,
+    PreguntasListarComponent
     
   ],
   imports: [
