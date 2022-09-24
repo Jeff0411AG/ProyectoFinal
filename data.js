@@ -29,33 +29,33 @@ module.exports = function () {
       ],
       pacientes: [
         {
-          Dni:"67947392",
+          id:67947392,
           Nombre: "Javier",
           Apellido: "Arias",
           FechaNacimiento: "15-02-00",
           Telefono: "937165936",
           NumHistoria: "01",
-          Diagnostico: "1",
+          Diagnostico: "Covid",
           Version: "2"
         },
         {
-          Dni:"49270637",
+          id:89270637,
           Nombre: "Miluska",
-          Apellido: "Fina",
+          Apellido: "Vargas",
           FechaNacimiento: "27-06-98",
           Telefono: "940736022",
           NumHistoria: "02",
-          Diagnostico: "false",
+          Diagnostico: "No Covid",
           Version: "2"
         },
         {	
-          Dni:"59438759",
+          id:5943875,
           Nombre: "Michelle",
           Apellido: "Valdizan",
           FechaNacimiento: "06-04-01",
-          Telefono: "992133626",
+          Telefono: "992133506",
           NumHistoria: "04",
-          Diagnostico: "true",
+          Diagnostico: "Gripe",
           Version: "1"
         }]
     }

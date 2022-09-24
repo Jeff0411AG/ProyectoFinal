@@ -9,7 +9,7 @@ import { Paciente } from 'src/app/model/paciente';
 })
 export class PacienteListarComponent implements OnInit {
 dataSource:MatTableDataSource<Paciente> = new MatTableDataSource();
-displayedColumns:string[]=['Dni','Nombre','Apellido','FechaNacimiento','Telefono','NumHistoria','Diagnostico','Version']
+displayedColumns:string[]=['id','Nombre','Apellido','FechaNacimiento','Telefono','NumHistoria','Diagnostico','Version','acciones']
   constructor(private ps:PacienteService) { }
 
   ngOnInit(): void {

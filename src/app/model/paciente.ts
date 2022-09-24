@@ -1,5 +1,5 @@
 export class Paciente{
-    Dni:string="";
+    id:number=0;
 	Nombre:string ="";
 	Apellido:string ="";
 	FechaNacimiento:string= "";
