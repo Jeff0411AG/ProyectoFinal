@@ -3,7 +3,7 @@ import { PacienteComponent } from './page/paciente/paciente.component';
 import { PacienteCreaeditaComponent } from './page/paciente/paciente-creaedita/paciente-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-creaedita.component';
+
 import { DoctorComponent } from './page/doctor/doctor.component';
 
 const routes: Routes = [
@@ -24,10 +24,6 @@ const routes: Routes = [
   { path: 'edicion/:id', component: PacienteCreaeditaComponent }
 
  ]}
-
-
-
- 
 
  ];
 

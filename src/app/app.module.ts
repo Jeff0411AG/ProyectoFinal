@@ -15,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { ConsultaComponent } from './page/consulta/consulta.component';
+import { ConsultaListarComponent } from './page/consulta/consulta-listar/consulta-listar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FormsModule } from '@angular/forms';
 
     PacienteComponent,
     PacienteCreaeditaComponent,
-    PacienteListarComponent
+    PacienteListarComponent,
+    ConsultaComponent,
+    ConsultaListarComponent
     
   ],
   imports: [

@@ -11,14 +11,16 @@ import { DoctorService } from 'src/app/service/doctor.service';
 })
 export class DoctorListarComponent implements OnInit {
 
-  dataSource:MatTableDataSource<Doctor>=new MatTableDataSource();
-  displayedColumns:string[]=['id','nombre','Apellido','telefono'];
-  constructor(private dS:DoctorService) { }
+  dataSource: MatTableDataSource<Doctor> = new MatTableDataSource();
+  displayedColumns: string[] = ['id', 'nombre', 'Apellido', 'telefono'];
+  constructor(private dS: DoctorService) { }
 
   ngOnInit(): void {
-      this.dS.listar().subscribe(data=>{
-      this.dataSource=new MatTableDataSource(data);
+    this.dS.listar().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
     })
+
+
     this.dS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
