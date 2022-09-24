@@ -27,5 +27,12 @@ export class DoctorService {
     return this.listaCambio.asObservable();
   }
 
+  
+  modificar(propietario: Doctor) {
+    return this.http.put(this.url + "/" + propietario.id, propietario);
+  }
+  listarId(id: number) {
+    return this.http.get<Doctor>(`${this.url}/${id}`);
+  }
 
 }

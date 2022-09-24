@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Doctor } from '../../../model/doctor';
 import { DoctorService } from '../../../service/doctor.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 
 @Component({
@@ -12,29 +12,48 @@ import { Router } from '@angular/router';
 export class DoctorCreaeditaComponent implements OnInit {
   doctor: Doctor =new Doctor();
   mensaje: string="";
-  constructor(private doctorService: DoctorService  , private router: Router) { }
+  edicion: boolean =false;
+  id:number=0;
+  constructor(private doctorService: DoctorService  , private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
 
+    this.route.params.subscribe((data:Params)=>{
+      this.id=data['id'];
+      this.edicion=data['id']!=null;
+      this.init();
+    })
   }
-  aceptar(): void{
-    //agregegar todas las condicionales
-    if ( ( this.doctor.Apellido.length > 0)){
-
-      this.doctorService.insertar(this.doctor).subscribe(data => {
-
-        this.doctorService.listar().subscribe(data => {
-          this.doctorService.setLista(data);
-
+  
+  aceptar(): void {
+    if (this.doctor.nombre.length > 0) {
+      if (this.edicion) {
+        this.doctorService.modificar(this.doctor).subscribe(data => {
+          this.doctorService.listar().subscribe(data => {
+            this.doctorService.setLista(data);
+          })
         })
-        
-      })
-      this.router.navigate(['doctor'])
+      } else {
 
-    }else{
-      this.mensaje="completa los valores";
+        this.doctorService.insertar(this.doctor).subscribe(data => {
+          this.doctorService.listar().subscribe(data => {
+            this.doctorService.setLista(data);
+          })
+        })
+      }
+      this.router.navigate(['doctor']);
+    } else {
+      this.mensaje = "Complete los valores requeridos";
     }
   }
 
 
+    init() {
+      if (this.edicion) {
+        this.doctorService.listarId(this.id).subscribe(data => {
+          this.doctor = data;
+        })
+      }
+
+  }
 }

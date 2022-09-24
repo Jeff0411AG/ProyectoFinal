@@ -26,7 +26,8 @@ import { FormsModule } from '@angular/forms';
 
     PacienteComponent,
     PacienteCreaeditaComponent,
-    PacienteListarComponent
+    PacienteListarComponent,
+
     
   ],
   imports: [
