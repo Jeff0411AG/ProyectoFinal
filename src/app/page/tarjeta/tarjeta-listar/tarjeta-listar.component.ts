@@ -9,9 +9,9 @@ import { Tarjeta } from 'src/app/model/tarjeta';
 })
 export class TarjetaListarComponent implements OnInit {
 dataSource:MatTableDataSource<Tarjeta> = new MatTableDataSource();
-displayedColumns:string[]=['Metodo','Nombre','Apellido','NumCuenta','FechaVen','NumCvc']
+displayedColumns:string[]=['id','Metodo','Nombre','Apellido','NumCuenta','FechaVen','NumCvc', 'acciones'];
   constructor(private ps:TarjetaService) { }
-
+  
   ngOnInit(): void {
     this.ps.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);

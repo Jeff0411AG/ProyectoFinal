@@ -7,7 +7,8 @@ const routes: Routes = [
 
   path: 'tarjetas', component: TarjetaComponent, children:
   [
-   { path: 'nuevo', component: TarjetaCreaeditaComponent }
+   { path: 'nuevo', component: TarjetaCreaeditaComponent },
+   { path: 'edicion/:id', component: TarjetaCreaeditaComponent }
   ]}
 
  ];

@@ -22,4 +22,11 @@ export class TarjetaService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  modificar(tarjeta: Tarjeta) {
+    return this.http.put(this.url + "/" + tarjeta.id, tarjeta);
+  }
+  listarId(id: number) {
+    return this.http.get<Tarjeta>(`${this.url}/${id}`);
+  }
+
 }

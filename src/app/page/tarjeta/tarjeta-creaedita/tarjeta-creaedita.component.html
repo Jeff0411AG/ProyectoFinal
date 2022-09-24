@@ -3,6 +3,13 @@
   <h1>Tarjeta</h1>
 
   <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="tarjeta.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
     <mat-label>Método de Pago</mat-label>
     <input matInput required placeholder="Metodo" [(ngModel)]="tarjeta.Metodo">
   </mat-form-field>

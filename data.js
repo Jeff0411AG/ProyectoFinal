@@ -3,6 +3,7 @@ module.exports = function () {
 
         tarjetas: [
           {
+            id:1,
             Metodo:"Débito",
             Nombre: "Edwin",
             Apellido: "Rodriguez",
@@ -11,6 +12,7 @@ module.exports = function () {
             NumCvc: "958"
           },
           {
+            id:2,
             Metodo:"Crédito",
             Nombre: "Juan",
             Apellido: "Silva",
@@ -19,6 +21,7 @@ module.exports = function () {
             NumCvc: "745"
           },
           {	
+            id:3,
             Metodo:"Crédito",
             Nombre: "David",
             Apellido: "Torres",
