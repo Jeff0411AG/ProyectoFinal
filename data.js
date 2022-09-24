@@ -1,63 +1,31 @@
 module.exports = function () {
     var data = {
 
-      doctor: [
-        {
-          idDoctor: 1,
-          nombre: "jeff",
-          Apellido: "Argar",
-          telefono: "+54 934",
-        },
-        {
-          idDoctor: 2,
-          nombre: "jeff",
-          Apellido: "Argar",
-          telefono: "+54 934",
-        },
-        {
-          idDoctor: 3,
-          nombre: "jeff",
-          Apellido: "Argar",
-          telefono: "+54 934",
-        },
-        {
-          idDoctor: 4,
-          nombre: "jeff",
-          Apellido: "Argar",
-          telefono: "+54 934",
-        }
-      ],
-      pacientes: [
-        {
-          Dni:"67947392",
-          Nombre: "Javier",
-          Apellido: "Arias",
-          FechaNacimiento: "15-02-00",
-          Telefono: "937165936",
-          NumHistoria: "01",
-          Diagnostico: "1",
-          Version: "2"
-        },
-        {
-          Dni:"49270637",
-          Nombre: "Miluska",
-          Apellido: "Fina",
-          FechaNacimiento: "27-06-98",
-          Telefono: "940736022",
-          NumHistoria: "02",
-          Diagnostico: "false",
-          Version: "2"
-        },
-        {	
-          Dni:"59438759",
-          Nombre: "Michelle",
-          Apellido: "Valdizan",
-          FechaNacimiento: "06-04-01",
-          Telefono: "992133626",
-          NumHistoria: "04",
-          Diagnostico: "true",
-          Version: "1"
-        }]
+        tarjetas: [
+          {
+            Metodo:"Débito",
+            Nombre: "Edwin",
+            Apellido: "Rodriguez",
+            NumCuenta: "4557775828454662",
+            FechaVen: "09-24",
+            NumCvc: "958"
+          },
+          {
+            Metodo:"Crédito",
+            Nombre: "Juan",
+            Apellido: "Silva",
+            NumCuenta: "4846125312454662",
+            FechaVen: "08-23",
+            NumCvc: "745"
+          },
+          {	
+            Metodo:"Crédito",
+            Nombre: "David",
+            Apellido: "Torres",
+            NumCuenta: "4518462374581564",
+            FechaVen: "04-25",
+            NumCvc: "456"
+          }]
     }
   
     return data
