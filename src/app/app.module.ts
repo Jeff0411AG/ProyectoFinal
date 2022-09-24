@@ -15,17 +15,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/paciente-buscar.component';
+import { PacienteMensajeComponent } from './page/paciente/paciente-listar/paciente-mensaje/paciente-mensaje.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     DoctorComponent,
     DoctorListarComponent,
     DoctorCreaeditaComponent,
     PacienteComponent,
     PacienteCreaeditaComponent,
-    PacienteListarComponent
+    PacienteListarComponent,
+    PacienteBuscarComponent,
+    PacienteMensajeComponent,
     
   ],
   imports: [
@@ -37,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   
   ],
   providers: [],
