@@ -15,6 +15,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { DoctorDialogoComponent } from './page/doctor/doctor-listar/doctor-dialogo/doctor-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,8 @@ import { FormsModule } from '@angular/forms';
     PacienteComponent,
     PacienteCreaeditaComponent,
     PacienteListarComponent,
+    DoctorDialogoComponent,
+    DoctorBuscarComponent
 
     
   ],
@@ -39,8 +45,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
-  
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
