@@ -39,9 +39,9 @@ export class PacienteCreaeditaComponent implements OnInit {
         this.pacienteService.listar().subscribe(data => {
           this.pacienteService.setLista(data);
         })
-      })
+      })}
       this.router.navigate(['pacientes']);
-    }
+    
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

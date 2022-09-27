@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from'@angular/common/http';
 import { Paciente } from '../model/paciente';
-import { Subject } from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class PacienteService {
   url: string = "http://localhost:5000/pacientes";
   private listaCambio = new Subject<Paciente[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
+
   constructor(private http: HttpClient) { }
   
   listar() {
@@ -28,6 +30,21 @@ export class PacienteService {
   listarId(id: number) {
     return this.http.get<Paciente>(`${this.url}/${id}`);
   }
-
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Paciente[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
+  }
 
 }
