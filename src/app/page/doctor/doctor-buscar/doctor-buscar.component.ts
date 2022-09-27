@@ -8,7 +8,7 @@ import { DoctorService } from 'src/app/service/doctor.service';
   styleUrls: ['./doctor-buscar.component.css']
 })
 export class DoctorBuscarComponent implements OnInit {
-  textoBuscar="";
+  textoBuscar: string="";
   
 
   constructor(private doctorService: DoctorService) { }
@@ -16,19 +16,18 @@ export class DoctorBuscarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  buscar(e: any){
-    let array: Doctor[]=[];
-    this.doctorService.listar().subscribe(data=>
-      {
-        data.forEach((Element,index)=>
-        {
-          if(Element.nombre.includes(e.target.value))
-          {
-            array.push(data[index]);
-          }
-        });
-        this.doctorService.setLista(array);
-      })
+  
+
+  buscar(e: any) {
+    let array: Doctor[] = [];
+    this.doctorService.listar().subscribe(data => {
+      data.forEach((element, index) => {
+        if (element.nombre.includes(e.target.value)) {
+          array.push(data[index]);
+        }
+      });
+      this.doctorService.setLista(array);
+    })
   }
 
 }

@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="container">
+    
     <div class="example-button-container">
       <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
       routerLink="/doctor/nuevo">
@@ -15,6 +16,9 @@
     </button>
      
     </div>
+
+    <app-paciente-buscar></app-paciente-buscar>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
