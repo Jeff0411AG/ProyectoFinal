@@ -15,13 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
 import { DoctorDialogoComponent } from './page/doctor/doctor-listar/doctor-dialogo/doctor-dialogo.component';
-
 import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar.component';
-
-
-
 import { MatDialogModule } from '@angular/material/dialog';
 import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/paciente-buscar.component';
 import { PacienteMensajeComponent } from './page/paciente/paciente-listar/paciente-mensaje/paciente-mensaje.component';
