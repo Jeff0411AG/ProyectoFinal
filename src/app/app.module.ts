@@ -21,6 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/paciente-buscar.component';
 import { PacienteMensajeComponent } from './page/paciente/paciente-listar/paciente-mensaje/paciente-mensaje.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { PacienteMensajeComponent } from './page/paciente/paciente-listar/pacien
 
 
     PacienteBuscarComponent,
-    PacienteMensajeComponent,
+    PacienteMensajeComponent
 
   ],
   imports: [
