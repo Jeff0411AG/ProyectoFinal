@@ -1,34 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from'@angular/common/http';
-import { Tarjeta } from '../model/tarjeta';
+import { Paciente } from '../model/paciente';
 import { EMPTY, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TarjetaService {
-  url: string = "http://localhost:5000/tarjetas";
-  private listaCambio = new Subject<Tarjeta[]>()
+export class PacienteService {
+  url: string = "http://localhost:5000/pacientes";
+  private listaCambio = new Subject<Paciente[]>()
   private confirmaEliminacion = new Subject<Boolean>()
-  
+
   constructor(private http: HttpClient) { }
   
   listar() {
-    return this.http.get<Tarjeta[]>(this.url);
+    return this.http.get<Paciente[]>(this.url);
   }
-  insertar(tarjeta: Tarjeta) {
-    return this.http.post(this.url, tarjeta);
+  insertar(paciente: Paciente) {
+    return this.http.post(this.url, paciente);
   }
-  setLista(listaNueva: Tarjeta[]) {
+  setLista(listaNueva: Paciente[]) {
     this.listaCambio.next(listaNueva);
   }
   getLista() {
     return this.listaCambio.asObservable();
   }
-  modificar(tarjeta: Tarjeta) {
-    return this.http.put(this.url + "/" + tarjeta.id, tarjeta);
+  modificar(paciente: Paciente) {
+    return this.http.put(this.url + "/" + paciente.id, paciente);
   }
   listarId(id: number) {
-    return this.http.get<Tarjeta>(`${this.url}/${id}`);
+    return this.http.get<Paciente>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
     return this.http.delete(this.url + "/" + id);
@@ -41,9 +41,10 @@ export class TarjetaService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Tarjeta[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<Paciente[]>(`${this.url}/buscar`, texto.toLowerCase(), {
       });
     }
     return EMPTY;
   }
+
 }

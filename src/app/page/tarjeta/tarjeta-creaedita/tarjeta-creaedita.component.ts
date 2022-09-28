@@ -14,8 +14,7 @@ export class TarjetaCreaeditaComponent implements OnInit {
   edicion: boolean = false;
   id: number = 0;
 
-  constructor(private tarjetaService: TarjetaService,
-    private router: Router, private route: ActivatedRoute) { }
+  constructor(private tarjetaService: TarjetaService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
