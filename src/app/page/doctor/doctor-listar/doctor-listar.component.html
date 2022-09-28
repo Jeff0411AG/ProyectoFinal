@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Documento</title>
 </head>
 <body>
-  <p>
 
-  </p>
   <div class="container">
     
-    <div class="example-button-container">
-      <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/doctor/nuevo">
-      <mat-icon>plus_one</mat-icon>
-    </button>
-     
-    </div>
-
     <app-paciente-buscar></app-paciente-buscar>
 
+    
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
@@ -70,7 +61,16 @@
         
       </table>
       
-      
+      <div class="example-button-container">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+        routerLink="/doctor/nuevo">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+       
+      </div>
+
+
+
   </div>
       
 </body>

@@ -46,6 +46,7 @@ export class DoctorService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+  
   buscar(texto: string) {
     if (texto.length != 0) {
       return this.http.post<Doctor[]>(`${this.url}/buscar`, texto.toLowerCase(), {

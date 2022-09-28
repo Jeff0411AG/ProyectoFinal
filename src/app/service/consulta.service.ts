@@ -35,6 +35,6 @@ export class ConsultaService {
     return this.http.get<Consulta>(`${this.url}/${id}`);
   }
 
-
+  
 
 }

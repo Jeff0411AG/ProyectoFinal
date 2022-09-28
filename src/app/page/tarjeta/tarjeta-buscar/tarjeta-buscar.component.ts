@@ -8,7 +8,7 @@ import { TarjetaService } from 'src/app/service/tarjeta.service';
   styleUrls: ['./tarjeta-buscar.component.css']
 })
 export class TarjetaBuscarComponent implements OnInit {
-  textoBuscar: string = ""
+  textoBuscar: string = "";
   constructor(private tarjetaService: TarjetaService) { }
 
   ngOnInit(): void {
