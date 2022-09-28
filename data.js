@@ -61,35 +61,30 @@ module.exports = function () {
 
         preguntas: [
           {
-            idPregunta: 1,
+            id: 1,
             Descripcion: "Pregunta 1",
             Respuesta: "Respuesta 1",
             
           },
           {
-            idPregunta: 2,
+            id: 2,
             Descripcion: "Pregunta2",
             Respuesta: "Respuesta 2",
             
           },
           {
-            idPregunta: 3,
+            id: 3,
             Descripcion: "jPregunta 3",
             Respuesta: "respuesta 3",
             
           },
           {
-            idPregunta: 4,
+            id: 4,
             Descripcion: "Pregunta 4",
             Respuesta: "Respuesta 4",
             
           }
         ],      
-
-
-
-
-
 
 
 

@@ -21,6 +21,7 @@ import {MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { PreguntasComponent } from './page/preguntas/preguntas.component';
 import { PreguntasListarComponent } from './page/preguntas/preguntas-listar/preguntas-listar.component';
+import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/preguntas-creadita.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +30,13 @@ import { PreguntasListarComponent } from './page/preguntas/preguntas-listar/preg
     DoctorComponent,
     DoctorListarComponent,
     DoctorCreaeditaComponent,
+    
     PacienteComponent,
     PacienteCreaeditaComponent,
     PacienteListarComponent,
     PreguntasComponent,
-    PreguntasListarComponent
+    PreguntasListarComponent,
+    PreguntasCreaditaComponent
     
   ],
   imports: [

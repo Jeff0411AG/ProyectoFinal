@@ -11,16 +11,17 @@ import { PreguntasService } from 'src/app/service/preguntas.service';
 export class PreguntasListarComponent implements OnInit {
 
   dataSource:MatTableDataSource<Preguntas>=new MatTableDataSource();
-  displayedColumns:string[]=['idPregunta','Descripcion','Respuesta']
+  displayedColumns:string[]=['id','Descripcion','Respuesta']
 
   constructor(private pS:PreguntasService) { }
 
   ngOnInit(): void {
     this.pS.listar().subscribe(data =>{
       this.dataSource=new MatTableDataSource(data);
+    })
 
-
-
+    this.pS.getLista().subscribe(data=>{
+      this.dataSource=new MatTableDataSource(data);
     })
 
 

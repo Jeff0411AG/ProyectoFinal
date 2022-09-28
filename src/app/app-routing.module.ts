@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-creaedita.component';
 import { DoctorComponent } from './page/doctor/doctor.component';
 import { PreguntasComponent } from './page/preguntas/preguntas.component';
+import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/preguntas-creadita.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,7 @@ const routes: Routes = [
  {
  path: 'preguntas', component: PreguntasComponent, children:
  [
- 
+  { path: 'nuevo', component: PreguntasCreaditaComponent }
  ]
 },
 
