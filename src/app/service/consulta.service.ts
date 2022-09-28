@@ -10,8 +10,8 @@ export class ConsultaService {
 
   url:string="http://localhost:5000/consultas";
   private listaCambio= new Subject<Consulta[]>()
-
-
+  
+  private confirmaEliminacion = new Subject<Boolean>()
   
   constructor(private http:HttpClient) { }
 
@@ -35,6 +35,16 @@ export class ConsultaService {
     return this.http.get<Consulta>(`${this.url}/${id}`);
   }
 
+    //eliminar
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
 
 
 }

@@ -27,6 +27,7 @@ import { ConsultaListarComponent } from './page/consulta/consulta-listar/consult
 import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/consulta-creadita.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consulta-dialogo/consulta-dialogo.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     PreguntasCreaditaComponent,
     ConsultaComponent,
     ConsultaListarComponent,
-    ConsultaCreaditaComponent
+    ConsultaCreaditaComponent,
+    ConsultaDialogoComponent
     
   ],
   imports: [
