@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Encuesta</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>id</mat-label>
+    <input matInput required placeholder="id" [(ngModel)]="encuesta.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>idPaciente</mat-label>
+    <input matInput required placeholder="idPaciente" [(ngModel)]="encuesta.idPaciente">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>fechaconsulta</mat-label>
+    <input  matInput required placeholder="fechaconsulta" [(ngModel)]="encuesta.fechaconsulta">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>anotaciones</mat-label>
+    <input  matInput required placeholder="anotaciones" [(ngModel)]="encuesta.anotaciones">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>listarPregunta</mat-label>
+    <input  matInput required placeholder="listarPregunta" [(ngModel)]="encuesta.listarPregunta">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/encuestas">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

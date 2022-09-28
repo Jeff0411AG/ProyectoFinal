@@ -27,6 +27,13 @@ module.exports = function () {
           telefono: "+54 934",
         }
       ],
+      encuestas:[{
+        id:01,
+        idPaciente:"733364",
+        fechaconsulta: "25/09/2022",
+        anotaciones: "todo ok",
+        listarPregunta:  "¿fiebre?",
+      }],
       pacientes: [
         {
           id:67947392,

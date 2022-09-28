@@ -18,6 +18,11 @@ import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PacienteBuscarComponent } from './page/paciente/paciente-buscar/paciente-buscar.component';
 import { PacienteMensajeComponent } from './page/paciente/paciente-listar/paciente-mensaje/paciente-mensaje.component';
+import { EncuestaComponent } from './page/encuesta/encuesta.component';
+import { EncuestaListarComponent } from './page/encuesta/encuesta-listar/encuesta-listar.component';
+import { EncuestaMensajeComponent } from './page/encuesta/encuesta-listar/encuesta-mensaje/encuesta-mensaje.component';
+import { EncuestaCreaeditaComponent } from './page/encuesta/encuesta-creaedita/encuesta-creaedita.component';
+import { EncuestaBuscarComponent } from './page/encuesta/encuesta-buscar/encuesta-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +34,11 @@ import { PacienteMensajeComponent } from './page/paciente/paciente-listar/pacien
     PacienteListarComponent,
     PacienteBuscarComponent,
     PacienteMensajeComponent,
+    EncuestaComponent,
+    EncuestaListarComponent,
+    EncuestaMensajeComponent,
+    EncuestaCreaeditaComponent,
+    EncuestaBuscarComponent,
     
   ],
   imports: [
