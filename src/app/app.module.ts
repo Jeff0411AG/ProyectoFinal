@@ -42,6 +42,11 @@ import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/con
 
 
 
+import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consulta-dialogo/consulta-dialogo.component';
+import { PreguntasBuscarComponent } from './page/preguntas/preguntas-buscar/preguntas-buscar.component';
+import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -74,10 +79,13 @@ import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/con
     PreguntasComponent,
     PreguntasListarComponent,
     PreguntasCreaditaComponent,
+    PreguntasBuscarComponent,
     
     ConsultaComponent,
     ConsultaListarComponent,
-    ConsultaCreaditaComponent
+    ConsultaCreaditaComponent,
+    ConsultaDialogoComponent,
+    ConsultaBuscarComponent
 
     
 
