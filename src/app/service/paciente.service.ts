@@ -8,6 +8,9 @@ import { Subject } from 'rxjs';
 export class PacienteService {
   url: string = "http://localhost:5000/pacientes";
   private listaCambio = new Subject<Paciente[]>()
+
+  private confirmaEliminacion = new Subject<Boolean>()
+
   constructor(private http: HttpClient) { }
   
   listar() {
@@ -22,4 +25,18 @@ export class PacienteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+
+  eliminar(id:number){
+    return this.http.delete(this.url + "/" + id);
+  }
+
+  getConfirmarEliminarcion(){
+    return this.confirmaEliminacion.asObservable();
+  }
+
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+
+
 }

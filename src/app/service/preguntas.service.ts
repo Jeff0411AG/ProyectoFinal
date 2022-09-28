@@ -12,6 +12,9 @@ export class PreguntasService {
   url:string="http://localhost:5000/preguntas";
 
   private listarCambio=new Subject<Preguntas[]>()
+
+  private confirmaEliminacion = new Subject<Boolean>()
+
   constructor(private http:HttpClient) { }
 
   listar(){
@@ -26,5 +29,22 @@ export class PreguntasService {
   getLista(){
     return this.listarCambio.asObservable();
   }
-  
+  modificar(preguntas:Preguntas){
+    return this.http.put(this.url + "/" + preguntas.id, preguntas);
+  }
+
+  listarId(id:number){
+    return this.http.get<Preguntas>(`${this.url}/${id}`);
+  }
+
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+
 }

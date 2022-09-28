@@ -6,6 +6,8 @@ import { DoctorCreaeditaComponent } from './page/doctor/doctor-creaedita/doctor-
 import { DoctorComponent } from './page/doctor/doctor.component';
 import { PreguntasComponent } from './page/preguntas/preguntas.component';
 import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/preguntas-creadita.component';
+import { ConsultaComponent } from './page/consulta/consulta.component';
+import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/consulta-creadita.component';
 
 const routes: Routes = [
   {
@@ -29,11 +31,18 @@ const routes: Routes = [
  {
  path: 'preguntas', component: PreguntasComponent, children:
  [
-  { path: 'nuevo', component: PreguntasCreaditaComponent }
+  { path: 'nuevo', component: PreguntasCreaditaComponent },
+  { path: 'edicion/:id', component: PreguntasCreaditaComponent }
  ]
 },
 
-
+{
+  path: 'consultas', component: ConsultaComponent, children:
+  [
+    { path: 'nuevo', component: ConsultaCreaditaComponent },
+    { path: 'edicion/:id', component: ConsultaCreaditaComponent }
+  ]
+ },
 
 
 

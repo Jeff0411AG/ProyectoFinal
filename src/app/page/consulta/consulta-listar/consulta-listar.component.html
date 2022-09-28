@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body >
+
+    <div class="container">
+        <div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div style="text-align: center;">
+            <h1>Lista de Consultas </h1>
+        </div>
+
+        <div >
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin: 0 auto;">
+
+                <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="FechaConsulta">
+                    <th mat-header-cell *matHeaderCellDef> FechaConsulta </th>
+                    <td mat-cell *matCellDef="let element"> {{element.FechaConsulta}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Paciente">
+                    <th mat-header-cell *matHeaderCellDef> Paciente </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Paciente}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Medico">
+                    <th mat-header-cell *matHeaderCellDef> Medico </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Medico}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Diagnostico">
+                    <th mat-header-cell *matHeaderCellDef> Diagnostico </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Diagnostico}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Obserbacion">
+                    <th mat-header-cell *matHeaderCellDef> Obserbacion </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Obserbacion}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Acciones">
+                    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+                            [routerLink]="['edicion', element?.id]">Actualizar</button>
+                    </td>
+                </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+
+        <div class="example-button-container" style="text-align: center;">
+
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+                routerLink="/consultas/nuevo">
+                <mat-icon>plus_one</mat-icon>
+            </button>
+        </div>
+
+    </div>
+
+
+
+</body>

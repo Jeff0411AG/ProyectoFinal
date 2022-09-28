@@ -22,6 +22,12 @@ import { FormsModule } from '@angular/forms';
 import { PreguntasComponent } from './page/preguntas/preguntas.component';
 import { PreguntasListarComponent } from './page/preguntas/preguntas-listar/preguntas-listar.component';
 import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/preguntas-creadita.component';
+import { ConsultaComponent } from './page/consulta/consulta.component';
+import { ConsultaListarComponent } from './page/consulta/consulta-listar/consulta-listar.component';
+import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/consulta-creadita.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +42,10 @@ import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/
     PacienteListarComponent,
     PreguntasComponent,
     PreguntasListarComponent,
-    PreguntasCreaditaComponent
+    PreguntasCreaditaComponent,
+    ConsultaComponent,
+    ConsultaListarComponent,
+    ConsultaCreaditaComponent
     
   ],
   imports: [
@@ -48,7 +57,9 @@ import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    
+    MatDialogModule
   
   ],
   providers: [],

@@ -1,0 +1,55 @@
+<div style="margin: 10%">
+    <div class="container" style="text-align: center;">
+
+        <h1>Insertar Consulta</h1>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="id" [(ngModel)]="consulta.id">
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>FechaConsulta</mat-label>
+            <input matInput required placeholder="FechaConsulta" [(ngModel)]="consulta.FechaConsulta">
+
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Paciente</mat-label>
+            <input matInput required placeholder="Paciente" [(ngModel)]="consulta.Paciente">
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Medico</mat-label>
+            <input matInput required placeholder="Medico" [(ngModel)]="consulta.Medico">
+
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Diagnostico</mat-label>
+            <input matInput required placeholder="Diagnostico" [(ngModel)]="consulta.Diagnostico">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Obserbacion</mat-label>
+            <input matInput required placeholder="Obserbacion" [(ngModel)]="consulta.Obserbacion">
+
+        </mat-form-field>
+
+
+        <br>
+        <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+        <button mat-raised-button color="warn" routerLink="/consultas">Cancelar</button>
+        <p>{{mensaje}}</p>
+
+    </div>
+
+
+</div>
