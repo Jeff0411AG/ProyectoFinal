@@ -1,9 +1,12 @@
 
 <div class="container">
+  
     <div style=" text-align: center;">
       <h1 style="color:rgba(255, 255, 255, 0.877)">Lista de tarjetas</h1>
     </div>
+
       <app-tarjeta-buscar></app-tarjeta-buscar>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
          
       <ng-container matColumnDef="id">

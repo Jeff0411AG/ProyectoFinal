@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Doctor } from '../model/doctor';
-import{Subject} from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
 
 
 @Injectable({
@@ -45,6 +45,13 @@ export class DoctorService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Doctor[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
     
 }
