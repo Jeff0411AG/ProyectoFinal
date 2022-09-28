@@ -28,6 +28,8 @@ import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/con
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consulta-dialogo/consulta-dialogo.component';
+import { PreguntasBuscarComponent } from './page/preguntas/preguntas-buscar/preguntas-buscar.component';
+import { ConsultaBuscarComponent } from './page/consulta/consulta-buscar/consulta-buscar.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { ConsultaDialogoComponent } from './page/consulta/consulta-listar/consul
     ConsultaComponent,
     ConsultaListarComponent,
     ConsultaCreaditaComponent,
-    ConsultaDialogoComponent
+    ConsultaDialogoComponent,
+    PreguntasBuscarComponent,
+    ConsultaBuscarComponent
     
   ],
   imports: [

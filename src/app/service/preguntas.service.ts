@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
 import { Preguntas } from '../model/preguntas';
 
 
@@ -46,5 +46,16 @@ export class PreguntasService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+
+  buscar(texto:string){
+    if(texto.length !=0){
+      return this.http.post<Preguntas[]>( `${this.url}/buscar`, texto.toLowerCase(),{
+
+      })
+    }
+    return EMPTY;
+  }
+
+
 
 }
