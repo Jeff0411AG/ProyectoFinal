@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import{MatIconModule} from'@angular/material/icon';
+import {MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -31,6 +31,14 @@ import { DoctorDialogoComponent } from './page/doctor/doctor-listar/doctor-dialo
 import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar.component';
 
 
+import { PreguntasComponent } from './page/preguntas/preguntas.component';
+import { PreguntasListarComponent } from './page/preguntas/preguntas-listar/preguntas-listar.component';
+import { PreguntasCreaditaComponent } from './page/preguntas/preguntas-creadita/preguntas-creadita.component';
+import { ConsultaComponent } from './page/consulta/consulta.component';
+import { ConsultaListarComponent } from './page/consulta/consulta-listar/consulta-listar.component';
+import { ConsultaCreaditaComponent } from './page/consulta/consulta-creadita/consulta-creadita.component';
+
+
 
 
 @NgModule({
@@ -40,6 +48,7 @@ import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar
     DoctorComponent,
     DoctorListarComponent,
     DoctorCreaeditaComponent,
+
     DoctorDialogoComponent,
     DoctorBuscarComponent,
 
@@ -53,7 +62,21 @@ import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar
     TarjetaListarComponent,
     TarjetaCreaeditaComponent,
     TarjetaDialogoComponent,
-    TarjetaBuscarComponent
+    TarjetaBuscarComponent,
+
+    
+    PacienteComponent,
+    PacienteCreaeditaComponent,
+    PacienteListarComponent,
+
+    PreguntasComponent,
+    PreguntasListarComponent,
+    PreguntasCreaditaComponent,
+    
+    ConsultaComponent,
+    ConsultaListarComponent,
+    ConsultaCreaditaComponent
+
     
 
   ],
@@ -68,9 +91,11 @@ import { DoctorBuscarComponent } from './page/doctor/doctor-buscar/doctor-buscar
     MatButtonModule,
     MatIconModule,
 
+
     MatDialogModule,
 
-  
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
